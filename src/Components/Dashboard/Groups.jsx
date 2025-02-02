@@ -35,7 +35,7 @@ const Groups = () => {
           <ClosedGroup />
         </div>
 
-        {addedGroups.map((group) => {})}
+        {/* {addedGroups.map((group) => {})} */}
 
         <AddGroup />
       </div>

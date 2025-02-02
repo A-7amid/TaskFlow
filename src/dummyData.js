@@ -23,7 +23,7 @@ export const closedTasks = [
   },
 ];
 
-export const madeGroups = [
+export const addedGroups = [
   [
     {
       title: "Go to the GYM",
