@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #202d48;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-light: #c4d0eb;
+  --color-dark: #334977;
+  --color-gray: #535353;
+  --color-blue: #17a2b8;
+  --color-yellow: #ffc107;
+  --color-green: #8bc34a;
+  --color-cyan: #f2f6ff;
+  --color-pink: #9d9d9f;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+.input {
+  @apply border-[3px] border-light dark:border-none dark:bg-neutral-800 rounded-md px-2 py-1 focus:outline-hidden dark:outline-gray-900;
+}
+
+.card {
+  @apply flex flex-col gap-y-4 border-[2.5px] border-light px-4 py-5 rounded-xl bg-white;
+}
+
+.card-input {
+  @apply border-[3px] border-light rounded-md px-3 py-1 focus:outline-hidden;
+}
+
+.status {
+  @apply bg-cyan p-4 flex flex-col rounded-xl h-full;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 13px;
+  margin-top: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #7e7e7e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #565656;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
